@@ -49,7 +49,7 @@ export const App = () => {
       }
     }
     fetch();
-  }, [query, page]);
+  }, [query, page, matches]);
 
   const handleSubmitForm = data => {
     setQuery(data);

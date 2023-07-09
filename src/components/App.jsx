@@ -16,13 +16,6 @@ export const App = () => {
   const [query, setQuery] = useState('');
   const [showBtn, setShowBtn] = useState(false);
 
-  // state = {
-  //   matches: [],
-  //   loading: false,
-  //   page: 1,
-  //   query: '',
-  //   showBtn: false,
-  // };
   useEffect(() => {
     if (query === '') return;
     async function fetch() {
@@ -49,7 +42,7 @@ export const App = () => {
       }
     }
     fetch();
-  }, [query, page, matches]);
+  }, [query, page]);
 
   const handleSubmitForm = data => {
     setQuery(data);

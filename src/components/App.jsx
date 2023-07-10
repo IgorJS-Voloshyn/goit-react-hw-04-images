@@ -34,7 +34,7 @@ export const App = () => {
           setShowBtn(false);
         }
 
-        setMatches([...matches, ...data.hits]);
+        setMatches(prevState => [...prevState, ...data.hits]);
       } catch (error) {
         console.log(error);
       } finally {
